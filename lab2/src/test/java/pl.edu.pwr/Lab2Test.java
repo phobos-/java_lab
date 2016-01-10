@@ -28,6 +28,6 @@ public class Lab2Test {
     public void Lab2ReceiveTest() throws NoMessageTypeFoundException{
         Message msg = new Message("d3", "test4");
         System.out.println("Received message: " + msg.toString());
-
+        queue.enqueue(msg);
     }
 }
