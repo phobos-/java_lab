@@ -1,0 +1,4 @@
+phone;name;surname;address;country;email;network_operator;salary
+511222333;Poul;Test;Wroclaw;Poland;sample@sample.com;plus;100
+511444555;Michael;Test;Wroclaw;Poland;sample@gmail.com;orange;200
+511222333;John;Test;Wroclaw;Poland;Test@sample.pl;play;300
