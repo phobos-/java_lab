@@ -1,0 +1,5 @@
+filename=C:/Users/Phobos/Desktop/java_michal/examples/lab3/test.csv
+outputFilename=proceed
+errorsFilename=errors
+rowsPerFile=1
+delimiter=;

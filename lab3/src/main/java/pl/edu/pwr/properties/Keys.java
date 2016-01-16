@@ -5,5 +5,9 @@ package pl.edu.pwr.properties;
  */
 public class Keys {
 
-    public static final String THREADS_AMOUNT = "threads";
+    public static final String FILENAME = "filename";
+    public static final String OUTPUT = "outputFilename";
+    public static final String ERRORS = "errorsFilename";
+    public static final String ROWSPERFILE = "rowsPerFile";
+    public static final String DELIMITER = "delimiter";
 }

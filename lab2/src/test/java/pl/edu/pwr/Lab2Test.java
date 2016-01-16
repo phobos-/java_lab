@@ -21,7 +21,8 @@ public class Lab2Test {
 
     @Test
     public void Lab2SendTest(){
-        System.out.println("Sending message: " + queue.dequeue().toString());
+        while(queue.size()>0)
+            System.out.println("Sending message: " + queue.dequeue().toString());
     }
 
     @Test

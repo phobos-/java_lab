@@ -1,4 +1,6 @@
-phone;name;surname;address;country;email;network_operator;salary
-511222333;Poul;Test;Wroclaw;Poland;sample@sample.com;plus;100
-511444555;Michael;Test;Wroclaw;Poland;sample@gmail.com;orange;200
-511222333;John;Test;Wroclaw;Poland;Test@sample.pl;play;300
+id;name;surname;address;country;email;network_operator;salary
+1;Poul;Test;Wroclaw;Poland;sample@sample.com;plus;100
+2;Michael;Test;Wroclaw;Poland;sample@gmail.com;orange;200
+2;Michael;Test;Wroclaw;Poland;sample@gmail.com;orange;200
+3;John;Test;Wroclaw;Poland;Testsamplepl;play;300
+3;John;Test;Wroclaw;Poland;Testsamplepl;play;300
