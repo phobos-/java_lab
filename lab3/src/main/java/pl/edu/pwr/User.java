@@ -38,10 +38,25 @@ public class User {
     public User(String delimiter, Integer id){
         this.delimiter = delimiter;
         this.id = id;
+        this.name = "";
+        this.surname = "";
+        this.address = "";
+        this.country = "";
+        this.email = "";
+        this.network_operator = "";
+        this.salary = Long.MIN_VALUE;
     }
 
     public User(String delimiter) {
         this.delimiter = delimiter;
+        this.id = -1;
+        this.name = "";
+        this.surname = "";
+        this.address = "";
+        this.country = "";
+        this.email = "";
+        this.network_operator = "";
+        this.salary = Long.MIN_VALUE;
     }
 
     public String getHeader(){

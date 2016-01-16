@@ -70,7 +70,7 @@ public class CsvParser {
         return user;
     }
 
-    private boolean validate(String [] input){
+    public boolean validate(String [] input){
         //validate size
         if(input.length != 8) return false;
 
