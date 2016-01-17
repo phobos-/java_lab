@@ -1,15 +1,10 @@
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Point;
-import java.awt.RenderingHints;
-import java.awt.Stroke;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
 public class DrawGraph extends JPanel {
@@ -26,6 +21,11 @@ public class DrawGraph extends JPanel {
 
     public DrawGraph(List<Integer> scores) {
         this.scores = scores;
+
+        TitledBorder title = BorderFactory.createTitledBorder(new EmptyBorder(0, 0, 0, 10), "Wylosowania");
+        title.setTitleJustification(TitledBorder.CENTER);
+        title.setTitleFont(new Font("Arial", Font.BOLD, 25));
+        setBorder(title);
     }
 
     @Override
@@ -94,18 +94,11 @@ public class DrawGraph extends JPanel {
         return new Dimension(PREF_W, PREF_H);
     }
 
-    public static void createAndShowGui() {
-        List<Integer> scores = new ArrayList<Integer>();
-        Random random = new Random();
-        int maxDataPoints = 16;
-        int maxScore = 20;
-        for (int i = 0; i < maxDataPoints; i++) {
-            scores.add(random.nextInt(maxScore));
-        }
+    public static void createAndShowGui(List<Integer> scores) {
         DrawGraph mainPanel = new DrawGraph(scores);
 
         JFrame frame = new JFrame("DrawGraph");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.getContentPane().add(mainPanel);
         frame.pack();
         frame.setLocationByPlatform(true);
