@@ -22,6 +22,8 @@ import static pl.edu.pwr.properties.Keys.*;
  * Created by Pawel on 2014-12-05.
  */
 public class Main {
+    public static final int PROPERTIES_FILE = 0;
+
     static ConfigService configService;
     static FileSender fileSender;
     static FileListener listener;
@@ -30,11 +32,10 @@ public class Main {
     static FileWorker fileWorker;
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        // Get your app key and secret from the Dropbox developers website.
-        final String APP_KEY = "INSERT_APP_KEY";
-        final String APP_SECRET = "INSERT_APP_SECRET";
 
-        DbxAppInfo appInfo = new DbxAppInfo(APP_KEY, APP_SECRET);
+        configService = new ConfigService(args[PROPERTIES_FILE]);
+
+        DbxAppInfo appInfo = new DbxAppInfo(configService.getProp(APP_KEY), configService.getProp(APP_SECRET));
 
         DbxRequestConfig config = new DbxRequestConfig("JavaTutorial/1.0",
                 Locale.getDefault().toString());
@@ -54,10 +55,8 @@ public class Main {
         } catch (DbxException e) {
             e.printStackTrace();
         }
-        String accessToken = authFinish.accessToken;
 
-        configService = new ConfigService("lab5/properties.txt");
-        fileSender = new FileSender(accessToken);
+        fileSender = new FileSender(authFinish.accessToken);
         listener = new FileListener(configService, fileSender, Integer.parseInt(configService.getProp(THREADS_AMOUNT)));
         statsService = new StatsService(fileSender);
         statsWorker = new StatsWorker(statsService);
