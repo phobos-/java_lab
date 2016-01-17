@@ -1,0 +1,3 @@
+input=C:/test/
+threads=3
+refreshMs=3000
