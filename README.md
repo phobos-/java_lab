@@ -1,7 +1,7 @@
 # java_lab 
 
-** REMEMBER TO CHANGE EVERY HARDCODED FILE PATH, ETC TO REFLECT WHAT'S IN YOUR FILESYSTEM **
-** most of the configuration parameters is in .properties files **
+**REMEMBER TO CHANGE EVERY HARDCODED FILE PATH, ETC TO REFLECT WHAT'S IN YOUR FILESYSTEM**
+**most of the configuration parameters are in properties.txt files**
 
 # lab1
 To test the **lab1** module go to lab1 in Intellij, open main.java.pl.edu.pwr.Main and press ALT + SHIFT + F10.
